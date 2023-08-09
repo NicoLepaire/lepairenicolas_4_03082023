@@ -1,0 +1,135 @@
+/***** General *****/
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+.btn {
+  background: linear-gradient(180deg, $main-color, $secondary-color);
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 220px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/*   font-family: "Shrikhand", cursive; */
+
+/* Header */
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+
+  &--img {
+    height: 35px;
+    width: 180px;
+  }
+}
+
+.header__location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  gap: 15px;
+  background-color: $header-color;
+}
+
+/*** Main ***/
+
+/* Explorer */
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: $section-color;
+
+  &__title {
+    margin: 30px 40px 15px 40px;
+  }
+
+  &__txt {
+    margin: 0px 40px 30px 40px;
+  }
+}
+
+/* Fonctionnement */
+
+.fonctionnement {
+  margin-top: 50px;
+  margin-bottom: 70px;
+
+  &__title {
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+}
+
+.fonctionnement__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  .fonctionnement__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $section-color;
+    border-radius: 20px;
+    height: 70px;
+    width: 330px;
+  }
+}
+
+/* Restaurants */
+
+.restaurants {
+  background-color: $section-color;
+
+  &__title {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+}
+
+.restaurants__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 50px;
+}
+
+.restaurants__card {
+  background-color: white;
+  border-radius: 15px;
+  width: 320px;
+
+  &--img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    height: 220px; /* En pourcentage ? */
+    width: 320px; /* En pourcentage ? */
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: $footer-color;
+  color: white;
+}
