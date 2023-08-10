@@ -1,8 +1,15 @@
 /***** General *****/
 
 * {
+  /* Breakpoints 320-767 // 768 - 1023 // 1024 - 1440 */
+  /* font-family: "Shrikhand"; */
   font-family: "Roboto", sans-serif;
   margin: 0px;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
 }
 
 .btn {
@@ -16,9 +23,8 @@
   width: 220px;
   margin: auto;
   margin-bottom: 50px;
+  @include shadow-box;
 }
-
-/*   font-family: "Shrikhand", cursive; */
 
 /* Header */
 
@@ -82,15 +88,21 @@
   align-items: center;
   gap: 15px;
 
-  .fonctionnement__card {
-    display: flex;
+  @media (min-width: 768px) {
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    background-color: $section-color;
-    border-radius: 20px;
-    height: 70px;
-    width: 330px;
   }
+}
+
+.fonctionnement__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $section-color;
+  border-radius: 20px;
+  height: 70px;
+  width: 330px;
+  @include shadow-box;
 }
 
 /* Restaurants */
@@ -106,24 +118,41 @@
 }
 
 .restaurants__block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-content: center;
   gap: 15px;
   padding-bottom: 50px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 370px 320px;
+    gap: 50px;
+  }
 }
 
 .restaurants__card {
   background-color: white;
   border-radius: 15px;
   width: 320px;
+  @include shadow-box;
 
   &--img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit: cover;
-    height: 220px; /* En pourcentage ? */
+    height: 160px; /* En pourcentage ? */
     width: 320px; /* En pourcentage ? */
+  }
+}
+
+.restaurants__txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 12px;
+  font-size: 14px;
+
+  .fa-heart {
+    font-size: 22px;
   }
 }
 
@@ -132,4 +161,27 @@
 .footer {
   background-color: $footer-color;
   color: white;
+  padding: 20px 25px;
+
+  &__title {
+    font-family: "Shrikhand";
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.fa-utensils {
+  margin-right: 15px;
+}
+
+.fa-handshake-angle {
+  margin-right: 9px;
 }
