@@ -1,0 +1,27 @@
+/* General */
+
+* {
+  /* Breakpoints 320-767 // 768 - 1023 // 1024 - 1440 */
+  /* font-family: "Shrikhand"; */
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+body {
+  max-width: $wide-width;
+  margin: auto;
+}
+
+.btn {
+  background: linear-gradient(180deg, $main-color, $secondary-color);
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 220px;
+  margin: auto;
+  margin-bottom: 50px;
+  @include shadow-box;
+}

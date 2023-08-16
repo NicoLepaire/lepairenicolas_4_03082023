@@ -1,0 +1,29 @@
+/* Footer */
+
+.footer {
+  background-color: $footer-color;
+  color: white;
+  padding: 20px 25px;
+
+  &__title {
+    font-family: "Shrikhand";
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.fa-utensils {
+  margin-right: 15px;
+}
+
+.fa-handshake-angle {
+  margin-right: 9px;
+}

@@ -1,0 +1,19 @@
+/* Header */
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+
+  &--img {
+    height: 35px;
+    width: 180px;
+  }
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}

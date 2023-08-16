@@ -1,58 +1,14 @@
-/***** General *****/
+/* Explorer */
 
-* {
-  /* Breakpoints 320-767 // 768 - 1023 // 1024 - 1440 */
-  /* font-family: "Shrikhand"; */
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-}
-
-body {
-  max-width: 1440px;
-  margin: auto;
-}
-
-.btn {
-  background: linear-gradient(180deg, $main-color, $secondary-color);
-  border-radius: 25px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 220px;
-  margin: auto;
-  margin-bottom: 50px;
-  @include shadow-box;
-}
-
-/* Header */
-
-.header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 65px;
-
-  &--img {
-    height: 35px;
-    width: 180px;
-  }
-}
-
-.header__location {
+.location {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 50px;
   gap: 15px;
-  background-color: $header-color;
+  background-color: $location-color;
 }
-
-/*** Main ***/
-
-/* Explorer */
 
 .explorer {
   display: flex;
@@ -88,7 +44,7 @@ body {
   align-items: center;
   gap: 15px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tab-width) {
     flex-direction: row;
     justify-content: center;
   }
@@ -123,7 +79,7 @@ body {
   gap: 15px;
   padding-bottom: 50px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tab-width) {
     grid-template-columns: 370px 320px;
     gap: 50px;
   }
@@ -154,34 +110,4 @@ body {
   .fa-heart {
     font-size: 22px;
   }
-}
-
-/* Footer */
-
-.footer {
-  background-color: $footer-color;
-  color: white;
-  padding: 20px 25px;
-
-  &__title {
-    font-family: "Shrikhand";
-    font-weight: 400;
-    margin-bottom: 15px;
-  }
-}
-
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style-type: none;
-  padding: 0px;
-}
-
-.fa-utensils {
-  margin-right: 15px;
-}
-
-.fa-handshake-angle {
-  margin-right: 9px;
 }
