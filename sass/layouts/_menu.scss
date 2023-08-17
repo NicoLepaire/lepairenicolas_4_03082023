@@ -10,6 +10,7 @@
   position: relative;
   bottom: 55px;
   padding-top: 32px;
+  padding-bottom: 40px;
   background-color: $section-color;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -55,9 +56,33 @@
 }
 
 .menu__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 12px;
   background-color: white;
   border-radius: 15px;
   padding: 15px;
+  padding-right: 0px;
+  height: 40px;
   @include shadow-box;
+
+  .fa-circle-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: $tertiary-color;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.menu__btn {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  width: 180px;
 }

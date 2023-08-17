@@ -12,6 +12,10 @@ body {
   margin: auto;
 }
 
+a {
+  color: black;
+}
+
 .btn {
   background: linear-gradient(180deg, $main-color, $secondary-color);
   border-radius: 25px;

@@ -22,6 +22,7 @@
   }
 
   &__txt {
+    color: $footer-color;
     margin: 0px 40px 30px 40px;
   }
 }
@@ -42,9 +43,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 
-  @media (min-width: $tab-width) {
+  @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: center;
   }
@@ -57,8 +58,63 @@
   background-color: $section-color;
   border-radius: 20px;
   height: 70px;
-  width: 330px;
+  width: 320px;
   @include shadow-box;
+
+  .fa-1 {
+    position: relative;
+    right: 66px;
+  }
+
+  .fa-2 {
+    position: relative;
+    right: 80px;
+  }
+
+  .fa-3 {
+    position: relative;
+    right: 75px;
+  }
+
+  .fa-1,
+  .fa-2,
+  .fa-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    height: 24px;
+    width: 24px;
+  }
+
+  .fa-mobile-screen-button {
+    position: relative;
+    right: 34px;
+    color: $fa-color;
+  }
+
+  .fa-list {
+    position: relative;
+    right: 30px;
+    margin-left: -17.5px;
+    color: $fa-color;
+  }
+
+  .fa-store {
+    position: relative;
+    right: 30px;
+    margin-left: -15px;
+    color: $fa-color;
+  }
+
+  .fa-mobile-screen-button:hover,
+  .fa-list:hover,
+  .fa-store:hover {
+    color: $main-color;
+  }
 }
 
 /* Restaurants */
@@ -79,8 +135,8 @@
   gap: 15px;
   padding-bottom: 50px;
 
-  @media (min-width: $tab-width) {
-    grid-template-columns: 370px 320px;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 480px 480px;
     gap: 50px;
   }
 }
@@ -91,12 +147,20 @@
   width: 320px;
   @include shadow-box;
 
+  @media (min-width: $desktop-width) {
+    width: 480px;
+  }
+
   &--img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit: cover;
-    height: 160px; /* En pourcentage ? */
-    width: 320px; /* En pourcentage ? */
+    height: 160px;
+    width: 320px;
+
+    @media (min-width: $desktop-width) {
+      width: 480px;
+    }
   }
 }
 
