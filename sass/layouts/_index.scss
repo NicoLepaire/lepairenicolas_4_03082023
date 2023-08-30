@@ -1,3 +1,54 @@
+/* Loader */
+
+.loader {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $tertiary-color;
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  animation: loader 3200ms linear forwards;
+}
+
+.fa-wine-bottle {
+  font-size: 222px;
+  animation: spin 1600ms linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  75% {
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Explorer */
 
 .location {
@@ -30,12 +81,22 @@
 /* Fonctionnement */
 
 .fonctionnement {
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 70px;
+  max-width: $mobile-width;
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
 
   &__title {
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 27.5px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 0px;
+    }
   }
 }
 
@@ -123,8 +184,6 @@
   background-color: $section-color;
 
   &__title {
-    margin-bottom: 20px;
-    margin-left: 20px;
     padding-top: 50px;
   }
 }
@@ -134,9 +193,11 @@
   justify-content: center;
   gap: 15px;
   padding-bottom: 50px;
+  margin: auto;
+  max-width: $desktop-width;
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 480px 480px;
+    grid-template-columns: 487px 487px;
     gap: 50px;
   }
 }
@@ -164,6 +225,25 @@
   }
 }
 
+.restaurants__new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $tertiary-color;
+  border-radius: 2px;
+  color: $new-color;
+  font-size: 14px;
+  position: absolute;
+  margin-left: 215px;
+  margin-top: 15px;
+  height: 30px;
+  width: 90px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 375px;
+  }
+}
+
 .restaurants__txt {
   display: flex;
   justify-content: space-between;
@@ -171,7 +251,32 @@
   margin: 12px 12px;
   font-size: 14px;
 
+  .fa-solid {
+    background-image: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 800ms;
+
+    &:hover {
+      background-image: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 1;
+      transition: all 800ms;
+    }
+  }
+
   .fa-heart {
+    cursor: pointer;
+    position: absolute;
     font-size: 22px;
+    margin-left: 274px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 434px;
+    }
   }
 }

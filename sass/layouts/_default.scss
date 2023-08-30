@@ -17,9 +17,11 @@ a {
 }
 
 .btn {
-  background: linear-gradient(180deg, $main-color, $secondary-color);
+  transition: all 400ms;
+  background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
   border-radius: 25px;
   color: white;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,4 +30,18 @@ a {
   margin: auto;
   margin-bottom: 50px;
   @include shadow-box;
+  &:hover {
+    transition: all 400ms;
+
+    /*
+    background: linear-gradient(
+      180deg,
+      lighten($secondary-color, 10%) 0%,
+      lighten($main-color, 10%) 100%
+    );
+    */
+
+    opacity: 0.8;
+    @include shadow-box-end;
+  }
 }

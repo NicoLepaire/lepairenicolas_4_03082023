@@ -12,8 +12,19 @@
   }
 }
 
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+
+  &--img {
+    height: 35px;
+    width: 180px;
+    margin-right: 38px;
+  }
+}
+
 .fa-arrow-left {
-  position: absolute;
-  top: 30px;
-  left: 15px;
+  margin-left: 17px;
 }
