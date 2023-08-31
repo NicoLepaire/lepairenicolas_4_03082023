@@ -82,7 +82,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99e2d0;
+  background-color: white;
   height: 100%;
   width: 100%;
   max-width: 1440px;
@@ -96,15 +96,11 @@ a {
 
 @keyframes loader {
   0% {
-    opacity: 0.8;
+    opacity: 1;
     z-index: 1;
   }
-  50% {
-    opacity: 0.6;
-    z-index: 1;
-  }
-  75% {
-    opacity: 0.4;
+  98% {
+    opacity: 1;
     z-index: 1;
   }
   100% {
