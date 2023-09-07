@@ -1,7 +1,6 @@
 /* General */
 
 * {
-  /* Breakpoints 320-767 // 768 - 1023 // 1024 - 1440 */
   /* font-family: "Shrikhand"; */
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -32,15 +31,6 @@ a {
   @include shadow-box;
   &:hover {
     transition: all 400ms;
-
-    /*
-    background: linear-gradient(
-      180deg,
-      lighten($secondary-color, 10%) 0%,
-      lighten($main-color, 10%) 100%
-    );
-    */
-
     opacity: 0.8;
     @include shadow-box-end;
   }

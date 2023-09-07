@@ -4,7 +4,6 @@
 /* Mixins */
 /* General */
 * {
-  /* Breakpoints 320-767 // 768 - 1023 // 1024 - 1440 */
   /* font-family: "Shrikhand"; */
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -36,13 +35,6 @@ a {
 }
 .btn:hover {
   transition: all 400ms;
-  /*
-  background: linear-gradient(
-    180deg,
-    lighten($secondary-color, 10%) 0%,
-    lighten($main-color, 10%) 100%
-  );
-  */
   opacity: 0.8;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
 }
